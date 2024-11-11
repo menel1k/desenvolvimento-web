@@ -1,4 +1,4 @@
-html,body{
+html{
     height: 100%;
     margin: 0;
     padding: 0;
@@ -8,12 +8,12 @@ html,body{
 .ContainerVideo {
     position: relative; 
     height: 100vh; 
+    width: 100%;
     overflow: hidden; 
-    margin-top: 50rem;
 }
 
 .BackgroundVideo {
-    position: fixed; 
+    position: absolute; 
     top: 0;
     left: 50%;
     width: 100%;
@@ -21,6 +21,7 @@ html,body{
     object-fit: cover;
     transform: translateX(-50%);
     z-index: -1; 
+    
 }
 
 
@@ -39,45 +40,97 @@ html,body{
     position: absolute; 
     top: 50%; 
     left: 50%; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transform: translate(-50%, -50%); 
     color: white; 
-    font-size: 5em; 
-    text-align: center; 
+    font-size: 80px; 
+    padding: 9rem 0;
+    width: 100%;
     z-index: 2; 
+    margin: 0 0 0 5rem;
+    text-shadow: -5px 0px 5px rgba(0,0,0,20);
+}
+
+.traço{
+position: absolute;
+top: 5%;
+box-shadow: 1px 1px 14px 5px rgba(0,0,0,0.39);
+background-color: rgb(0, 134, 7);
+padding: 1vh 0 2vh 0;
+height: 5vh;
+width: 10rem;
+margin: 28vh 0 0 7rem;
+z-index: 5;
 }
 
 .container1 {
-    width: 100%;
-    height: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    color: #003366;
+    gap: 20px;
+display: flex;
     background-color: #d1eef5;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: relative;
-    margin-top: 500px; /* Ajuste conforme necessário */
+    flex-direction: column;
+    padding: 20px;
+    
 }
 
-.container2, .container3, .container4, .container5 {
+.container1 h1{
+    text-align: center;
+}
+
+.cards-conteiner {
+display: flex;
+justify-content: center;
+gap: 20px;
+width: 100%;
+}
+
+.card{
+    background-color: white;
+      border-radius: 10px;
+      padding: 25px;
+      margin-right: 5rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      width: 300px;
+
+}
+
+.card img {
     width: 100%;
-    display: flex;
-    height: 20rem;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card h2 {
+    margin-top: 10px;
+  }
+
+  .card p {
+    line-height: 1.5;
+  }
+
+.TEXT{
+    font-size: 40px;
+    color: #003366;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.container2 {
-    background-color: darkblue;
-}
 
-.container3 {
-    background-color: rgb(26, 26, 116);
-}
 
 .container4 {
-    background-color: rgb(43, 43, 119);
+    background-color: #d1eef5;
+    width: 100%;
+    display: flex;
+    height: 25rem;
 }
 
-.container5 {
-    background-color: rgb(49, 49, 117);
-}
+
+footer {
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    padding: 20px 0;
+    font-size: 19px;
+    text-align: center;
+  }
+
+ 

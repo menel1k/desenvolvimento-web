@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+          
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: aliceblue;
+        }
+        input, button {
+            width: 80%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #qrcodeSection, #whatsappLink {
+            display: none;
+        }
+        img {
+            width: 100%;
+            max-width: 200px;
+            margin: 10px 0;
+        }
+        #backButton {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #28a745;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body background="Assets/fundodoar.jpg">
+    <div class="container">
+         <!-- Botão de Voltar ao Home -->
+         <div id="backButton" onclick="backToHome()">⇦ Voltar</div>
+
+        <h2>Faça sua Doação</h2>
+        
+        <!-- Formulário de doação -->
+        <form id="donationForm">
+            <input type="text" id="name" placeholder="Seu Nome" required>
+            <input type="email" id="email" placeholder="Seu Email" required>
+            <input type="number" id="amount" placeholder="Valor da Doação (R$)" required>
+            <button type="button" onclick="showQRCode()">Gerar QR Code para Doação</button>
+        </form>
+
+        <!-- QR Code e botão de confirmação -->
+        <div id="qrcodeSection">
+            <h3>Escaneie para fazer o PIX</h3>
+            <img src="Assets/pixqrcodecerto.jpg" alt="QR Code para doação"> <!-- Substitua pela imagem do QR Code -->
+            <button id="confirmButton" onclick="confirmDonation()">Pagamento Realizado</button>
+        </div>
+
+        <!-- Link para WhatsApp -->
+        <a href="" id="whatsappLink" target="_blank">Enviar Comprovante pelo WhatsApp</a>
+    </div>
+
+    <script>
+         // Função para redirecionar para a página principal (home.html)
+         function backToHome() {
+            window.location.href = "index.html";
+        }
+        // Função para exibir o QR Code e o botão de confirmação
+        function showQRCode() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const amount = document.getElementById("amount").value;
+
+            if (name && email && amount) {
+                document.getElementById("qrcodeSection").style.display = "block";
+
+            } else {
+                alert("Por favor, preencha todos os campos!");
+            }
+        }
+
+        // Função para confirmar o pagamento e exibir o link do WhatsApp
+        function confirmDonation() {
+            const name = document.getElementById("name").value;
+            const amount = document.getElementById("amount").value;
+
+            // Criação do link para WhatsApp com os dados do doador
+            const whatsappLink = `https://wa.me/5585997128948?text=Olá,%20meu%20nome%20é%20${encodeURIComponent(name)}.%20Fiz%20uma%20doação%20de%20R$%20${encodeURIComponent(amount)}%20e%20gostaria%20de%20enviar%20o%20comprovante.`;
+            
+            const linkElement = document.getElementById("whatsappLink");
+            linkElement.href = whatsappLink;
+            linkElement.style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="Css/Style.css">
     <link rel="stylesheet" href="Css/Scroll.css">
     <link rel="stylesheet" href="Css/ConteudoHome.css">
+    <link rel="stylesheet" href="Css/Carrosel.css">
 </head>
 <body>
     
 <header>
-    
     <div class="Barra">
         <ul>
             <li>
@@ -20,32 +20,91 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="LinhaDoTempo.html">Linha do tempo</a></li>
             <li><a href="#">Quem Somos</a></li>
-            <li><a href="#">Contatos</a></li>
             <li>
-                <button onclick="window.location.href='LinhaDoTempo.html'">Doe aqui</button>
+                <button onclick="window.location.href='doar.html'">Doe aqui</button>
             </li>
         </ul>
     </div>
-    
 </header>
- <div class="espaço"></div>
+ 
+<div class="espaço"></div>
 
 <section class="ContainerVideo">
     <div class="BackgroundVideo">
-       <video autoplay muted loop class="paralaxVideo"><source src="Assets/Arara.mp4" type="video/mp4"></video>
+       <video autoplay muted loop class="paralaxVideo"><source src="Assets/AnimaisMarinhos.mp4" type="video/mp4"></video>
     </div>
+    <div class="traço"></div>
     <div class="Filtro">
-        <h1 class="TextVideo">Protegendo a vida<br> preservando o futuro.</h1>
+        <span class="TextVideo">Protegendo a vida<br> preservando o futuro.</span>
     </div>
 </section>
 
-<section class="container1"><h1>Estrutura de proteção e combate a extição de animais</h1></section>
-<section class="container2"></section>
-<section class="container3"></section>
+<div class="container1">
+
+    <h1><span class="TEXT">A Ecomar é uma ONG dedicada à preservação do meio ambiente, com foco na proteção dos oceanos e ecossistemas costeiros. Por meio de campanhas de conscientização, ações de limpeza e projetos sustentáveis, buscamos engajar a sociedade na construção de um futuro mais verde.</span></h1>
+
+    <div class="cards-conteiner">
+    <div class="card">
+        <img src="https://img.pikbest.com/ai/illus_our/20230413/8b4e309418341204526b56ba40b5578b.jpg!w700wp" alt="Leão marinho">
+        <h2>Membership</h2>
+        <p>Looking for a quick and easy way to support the seas around us? Find out what it means to join our UK-wide community of marine lovers and become a member of our ocean charity today</p>
+    </div>
+    <div class="card">
+        <img src="https://img.freepik.com/fotos-premium/criancas-limpando-a-praia-durante-o-dia-usando-luvas-e-sacos-de-lixo_575947-58.jpg" alt="Praia">
+        <h2>Conservation</h2>
+        <p>Join us in our mission to protect marine life and habitats. Learn more about our conservation projects and how you can get involved to make a difference</p>
+    </div>
+    <div class="card">
+        <img src="https://storage.googleapis.com/agenciakender-conteudo/ednaldo-racoes-a-importancia-da-educacao-animal-164008.webp" alt="Educação">
+        <h2>Education</h2>
+        <p>Discover the wonders of the ocean through our educational programs. We offer resources and activities for all ages to learn about marine ecosystems</p>
+    </div>
+    </div>
+</div>
+
+<div class="slider">
+    <div class="slides">
+        <!-- Radio buttons para controle -->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+
+        <!-- Slides do carrossel -->
+        <div class="slide first">
+            <img src="Assets/MAMACO.png" alt="Imagem 1">
+        </div>
+        <div class="slide">
+            <img src="Assets/ARARA.png" alt="Imagem 2">
+        </div>
+        <div class="slide">
+            <img src="Assets/Tartaruga.png" alt="Imagem 3">
+        </div>
+        <div class="slide">
+            <img src="Assets/Canguru.png" alt="Imagem 4">
+        </div>
+    </div>
+
+    <!-- Navegação automática -->
+    <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+    </div>
+
+    <!-- Navegação manual -->
+    <div class="manual-navigation">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+    </div>
+</div>
+<script src="Script.js"></script>
 <section class="container4"></section>
-<section class="container5"></section>
-
-
-
+<footer>
+          <p>&copy; 2023 Todos os direitos reservados | para mais informações entre em contato conosco.</p>
+  </footer>
 </body>
 </html>
